@@ -1,0 +1,34 @@
+{
+  "name": "rea-postman",
+  "version": "1.0.0",
+  "private": true,
+  "description": "API Playground for Non-Technical Teams - Translates Natural Language queries into secure API requests without exposing keys to frontend",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspaces --if-present",
+    "dev:web": "npm run dev --workspace=@rea/web",
+    "dev:api": "npm run dev --workspace=@rea/api",
+    "build": "npm run build --workspaces --if-present",
+    "build:web": "npm run build --workspace=@rea/web",
+    "build:api": "npm run build --workspace=@rea/api",
+    "build:db": "npm run build --workspace=@rea/db",
+    "start:api": "npm run start --workspace=@rea/api",
+    "start:web": "npm run start --workspace=@rea/web",
+    "lint": "npm run lint --workspaces --if-present",
+    "clean": "rm -rf node_modules apps/*/node_modules packages/*/node_modules apps/*/.next apps/*/dist packages/*/dist"
+  },
+  "keywords": [
+    "api-playground",
+    "natural-language-api",
+    "nextjs",
+    "express",
+    "supabase",
+    "monorepo",
+    "railway"
+  ],
+  "author": "Antigravity Engineering",
+  "license": "MIT"
+}
